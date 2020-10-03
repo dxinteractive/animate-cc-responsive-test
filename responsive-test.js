@@ -206,10 +206,10 @@ lib.properties = {
 	color: "#00CCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1601694694938", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1601694694938", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1601694694938", id:"an.TextInput"},
-		{src:"components/ui/src/css.js?1601694694938", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1601695155608", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1601695155608", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1601695155608", id:"an.TextInput"},
+		{src:"components/ui/src/css.js?1601695155608", id:"an.CSS"}
 	],
 	preloads: []
 };

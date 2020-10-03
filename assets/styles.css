@@ -1,5 +1,8 @@
 #htmlInputThing {
-	font-size: 2rem;
+	font-size: 50px;
+	color: #FFF;
+    background-color: #000;
+	height: auto !important;
 }
 
 html {
