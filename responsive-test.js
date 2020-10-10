@@ -205,7 +205,7 @@ p._updateVisibility = _updateVisibility;
 		test.y = 50;
 		stage.addChild(test);
 		
-		setInterval(function () {console.log('presumeMouse', presumeMouse)}, 1000);
+		setTimeout(function () {alert('presumeMouse: ' + presumeMouse ? 't' : 'f')}, 5000);
 		
 		window.addEventListener('resize', function() {
 			console.log('presumeMouse', presumeMouse);
