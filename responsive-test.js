@@ -227,12 +227,12 @@ p._updateVisibility = _updateVisibility;
 	this.htmlInputThing.setTransform(293,208.9,3.16,4.091,0,0,0,50,11.2);
 
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AkEG4Qh6gchdhBQhchAg2hmQg0hnAAiSIAAmQIVDAAIAAGQQAACSg0BnQg2BmhcBAQhdBBh6AcQh7AdiKAAQiJAAh7gdgAn2hhQAABuAnBIQAnBJBFArQBFArBbASQBcARBnAAQBoAABcgRQBbgSBFgrQBFgrAnhJQAnhIAAhuIAAi1IvtAAg");
-	this.shape.setTransform(115.1,148.5);
+	this.shape.graphics.f("#000000").s().p("AkNDwQiEglh0hGQh1hGhehmQhehlg+iHIC3AAQB/C+CyBbQCxBbDbAAQDcAACyhbQCyhbB+i+IC3AAQg+CHheBlQhdBmh2BGQh0BGiEAlQiEAkiKAAQiJAAiEgkg");
+	this.shape.setTransform(97.4,142.9);
 
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#000000").s().p("ADPBaIAAizIDnAAIAACzgAm1BaIAAizIDnAAIAACzg");
-	this.shape_1.setTransform(91.5,62.7);
+	this.shape_1.setTransform(91.5,83.6);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.htmlInputThing},{t:this.instance}]}).wait(1));
 
