@@ -162,12 +162,53 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
+		var touchEvents = 'ontouchstart' in window;
+		var presumeTouch = touchEvents || navigator.maxTouchPoints;
+		
+		var presumeMouse = false;
+		
+		if(presumeTouch) {
+		
+		    addRemoveEvents(true);
+		
+		    function onFirstAction(e) {
+		        addRemoveEvents(false);
+		
+		        if ( e.type === 'touchstart' || ( e.pointerType === "touch" /*&& e.isPrimary === true*/ ) ) {
+		        } else {
+		            presumeMouse = true;
+		        }
+		    }
+		
+		    function addRemoveEvents(add) {
+		        if (add) {
+		            window.addEventListener('mouseover', onFirstAction, false);
+		            window.addEventListener('wheel', onFirstAction, {passive: true});
+		            if (touchEvents) {
+		                window.addEventListener('touchstart', onFirstAction, {passive: true});
+		            } else {
+		                window.addEventListener('pointerdown', onFirstAction, false); 
+		            }
+		        } else {
+		            window.removeEventListener('mouseover', onFirstAction, false);
+		            window.removeEventListener('wheel', onFirstAction, {passive: true});
+		            window.removeEventListener('touchstart', onFirstAction, {passive: true});
+		            window.removeEventListener('pointerdown', onFirstAction, false);
+		        }
+		    }
+		} else {
+			presumeMouse = true;
+		}
+		
 		var test = new lib.Test();
 		test.x = 200;
 		test.y = 50;
 		stage.addChild(test);
 		
+		setInterval(function () {console.log('presumeMouse', presumeMouse)}, 1000);
+		
 		window.addEventListener('resize', function() {
+			console.log('presumeMouse', presumeMouse);
 			console.log("!", window.innerWidth, window.innerHeight);
 			test.alpha = window.innerWidth > window.innerHeight ? 1 : 0;
 		});
@@ -206,10 +247,10 @@ lib.properties = {
 	color: "#00CCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1601695155608", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1601695155608", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1601695155608", id:"an.TextInput"},
-		{src:"components/ui/src/css.js?1601695155608", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1602348538504", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1602348538504", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1602348538504", id:"an.TextInput"},
+		{src:"components/ui/src/css.js?1602348538504", id:"an.CSS"}
 	],
 	preloads: []
 };
