@@ -205,12 +205,6 @@ p._updateVisibility = _updateVisibility;
 			console.log('<<<');
 			a.alpha = 1;
 		});
-		
-		
-		stage.addEventListener('touchend', function() {
-			console.log('<<awdawdawd<');
-			a.alpha = 0.7;
-		});
 	}
 
 	// actions tween:
@@ -235,8 +229,8 @@ p._updateVisibility = _updateVisibility;
 	this.shape.setTransform(132.1,131.6);
 
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#000000").s().p("ADPBaIAAizIDnAAIAACzgAm1BaIAAizIDnAAIAACzg");
-	this.shape_1.setTransform(108.5,53.9);
+	this.shape_1.graphics.f("#000000").s().p("AoVgSIAAigIGoC/IAACmgAEvCfIAAizIDoAAIAACzg");
+	this.shape_1.setTransform(98.8,47);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.htmlInputThing},{t:this.instance},{t:this.aaa}]}).wait(1));
 
@@ -251,10 +245,10 @@ lib.properties = {
 	color: "#00CCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1602505912378", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1602505912378", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1602505912378", id:"an.TextInput"},
-		{src:"components/ui/src/css.js?1602505912378", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1602506108479", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1602506108479", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1602506108479", id:"an.TextInput"},
+		{src:"components/ui/src/css.js?1602506108479", id:"an.CSS"}
 	],
 	preloads: []
 };
