@@ -42,6 +42,23 @@ p._updateVisibility = _updateVisibility;
 
 
 
+(lib.Symbol2 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#FFFFFF").ss(1,1,1).p("AHYAAQAAC5iKCEQiKCDjEAAQjCAAiLiDQiKiEAAi5QAAi5CKiDQCLiDDCAAQDEAACKCDQCKCDAAC5g");
+	this.shape.setTransform(-47.2,-44.8);
+
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#0000FF").s().p("AlNE9QiKiEAAi5QAAi5CKiDQCLiDDCAAQDDAACKCDQCLCDAAC5QAAC5iLCEQiKCDjDAAQjCAAiLiDg");
+	this.shape_1.setTransform(-47.2,-44.8);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.Symbol2, new cjs.Rectangle(-95.4,-90.6,96.4,91.6), null);
+
+
 (lib.Test = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -162,13 +179,13 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		var touchEvents = 'ontouchstart' in window;
-		var presumeTouch = touchEvents || navigator.maxTouchPoints;
+		var presumeTouch = ('ontouchstart' in window) || navigator.maxTouchPoints;
 		
 		var presumeMouse = false;
 		
 		if(presumeTouch) {
-		
+			alert('presumeTouch...');
+			
 		    addRemoveEvents(true);
 		
 		    function onFirstAction(e) {
@@ -205,12 +222,24 @@ p._updateVisibility = _updateVisibility;
 		test.y = 50;
 		stage.addChild(test);
 		
-		setTimeout(function () {alert('presumeMouse: ' + presumeMouse ? 't' : 'f')}, 5000);
+		//setTimeout(function () {alert('presumeMouse: ' + presumeMouse ? 't' : 'f')}, 5000);
 		
 		window.addEventListener('resize', function() {
 			console.log('presumeMouse', presumeMouse);
 			console.log("!", window.innerWidth, window.innerHeight);
 			test.alpha = window.innerWidth > window.innerHeight ? 1 : 0;
+		});
+		
+		var a = this.aaa;
+		
+		a.addEventListener('mousedown', function() {
+			console.log('>>>');
+			a.alpha = 0.5;
+		});
+		
+		stage.addEventListener('stagemouseup', function() {
+			console.log('<<<');
+			a.alpha = 1;
 		});
 	}
 
@@ -218,6 +247,11 @@ p._updateVisibility = _updateVisibility;
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Layer_1
+	this.aaa = new lib.Symbol2();
+	this.aaa.name = "aaa";
+	this.aaa.parent = this;
+	this.aaa.setTransform(379.2,75.2,1.953,1.953,0,0,0,-47.1,-44.7);
+
 	this.instance = new lib.an_CSS({'id': '', 'href':'assets/styles.css'});
 
 	this.instance.setTransform(315,-17.9,1,1,0,0,0,50,11);
@@ -234,10 +268,10 @@ p._updateVisibility = _updateVisibility;
 	this.shape_1.graphics.f("#000000").s().p("ADPBaIAAizIDnAAIAACzgAm1BaIAAizIDnAAIAACzg");
 	this.shape_1.setTransform(91.5,83.6);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.htmlInputThing},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.htmlInputThing},{t:this.instance},{t:this.aaa}]}).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(232.6,120.6,470.1,284.6);
+p.nominalBounds = new cjs.Rectangle(232.6,120.6,489.6,284.6);
 // library properties:
 lib.properties = {
 	id: 'D43248555B3A0642AA70B06D603579DA',
