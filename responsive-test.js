@@ -193,6 +193,12 @@ p._updateVisibility = _updateVisibility;
 			a.alpha = 0.5;
 		});
 		
+		a.addEventListener('touchstart', function() {
+			console.log('>>sfesefsef>');
+			a.alpha = 0.2;
+		});
+		
+		
 		stage.addEventListener('stagemouseup', function() {
 			console.log('<<<');
 			a.alpha = 1;
