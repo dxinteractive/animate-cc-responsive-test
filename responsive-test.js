@@ -179,6 +179,8 @@ p._updateVisibility = _updateVisibility;
 
 	// timeline functions:
 	this.frame_0 = function() {
+		createjs.Touch.enable(stage);
+		
 		var test = new lib.Test();
 		test.x = 200;
 		test.y = 50;
@@ -203,6 +205,12 @@ p._updateVisibility = _updateVisibility;
 			console.log('<<<');
 			a.alpha = 1;
 		});
+		
+		
+		stage.addEventListener('touchend', function() {
+			console.log('<<awdawdawd<');
+			a.alpha = 0.7;
+		});
 	}
 
 	// actions tween:
@@ -220,20 +228,20 @@ p._updateVisibility = _updateVisibility;
 
 	this.htmlInputThing = new lib.an_TextInput({'id': 'htmlInputThing', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
 
-	this.htmlInputThing.setTransform(293,208.9,3.16,4.091,0,0,0,50,11.2);
+	this.htmlInputThing.setTransform(89.1,225.9,3.16,4.091,0,0,0,50,11.2);
 
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AkNDwQiEglh0hGQh1hGhehmQhehlg+iHIC3AAQB/C+CyBbQCxBbDbAAQDcAACyhbQCyhbB+i+IC3AAQg+CHheBlQhdBmh2BGQh0BGiEAlQiEAkiKAAQiJAAiEgkg");
-	this.shape.setTransform(97.4,142.9);
+	this.shape.graphics.f("#000000").s().p("AknGcQiBgihZg7Qhag8gvhRQgthRAAhgQAAhhAthRQAvhRBag8QBZg7CBghQCDgiCkAAQClAACCAiQCCAhBYA7QBbA8AuBRQAuBRABBhQgBBgguBRQguBRhbA8QhYA7iCAiQiCAhilAAQikAAiDghgAjsjoQhlAVhAAjQhAAkgeAuQgeAuAAAxQAAAwAeAuQAeAvBAAjQBAAjBlAVQBjAWCJAAQCKAABjgWQBkgVBBgjQBAgjAdgvQAfguAAgwQAAgxgfguQgdguhAgkQhBgjhkgVQhjgWiKAAQiJAAhjAWg");
+	this.shape.setTransform(132.1,131.6);
 
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#000000").s().p("ADPBaIAAizIDnAAIAACzgAm1BaIAAizIDnAAIAACzg");
-	this.shape_1.setTransform(91.5,83.6);
+	this.shape_1.setTransform(108.5,53.9);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.htmlInputThing},{t:this.instance},{t:this.aaa}]}).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(232.6,120.6,489.6,284.6);
+p.nominalBounds = new cjs.Rectangle(179.5,120.6,542.7,301.6);
 // library properties:
 lib.properties = {
 	id: 'D43248555B3A0642AA70B06D603579DA',
@@ -243,10 +251,10 @@ lib.properties = {
 	color: "#00CCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js", id:"an.TextInput"},
-		{src:"components/ui/src/css.js", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1602505912378", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1602505912378", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1602505912378", id:"an.TextInput"},
+		{src:"components/ui/src/css.js?1602505912378", id:"an.CSS"}
 	],
 	preloads: []
 };
