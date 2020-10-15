@@ -174,11 +174,13 @@ p._updateVisibility = _updateVisibility;
 
 
 // stage content:
-(lib.responsivetest = function(mode,startPosition,loop) {
+(lib.RECOVER_responsivetest = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
 	this.frame_0 = function() {
+		createjs.Touch.enable(stage);
+		
 		var test = new lib.Test();
 		test.x = 200;
 		test.y = 50;
@@ -220,20 +222,20 @@ p._updateVisibility = _updateVisibility;
 
 	this.htmlInputThing = new lib.an_TextInput({'id': 'htmlInputThing', 'value':'', 'disabled':false, 'visible':true, 'class':'ui-textinput'});
 
-	this.htmlInputThing.setTransform(176,208.9,3.16,4.091,0,0,0,50,11.2);
+	this.htmlInputThing.setTransform(189.1,218.9,3.16,4.091,0,0,0,50,11.2);
 
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#000000").s().p("AkNDvQiEgkh0hGQh1hGhehmQhehmg+iGIC3AAQB/C+CyBaQCxBbDbAAQDcAACyhbQCyhaB+i+IC3AAQg+CGheBmQhdBmh2BGQh0BGiEAkQiEAliKAAQiJAAiEglg");
-	this.shape.setTransform(456.4,281.9);
+	this.shape.graphics.f("#000000").s().p("AknGcQiBgihZg7Qhag8gvhRQgthRAAhgQAAhhAthRQAvhRBag8QBZg7CBghQCDgiCkAAQClAACCAiQCCAhBYA7QBbA8AuBRQAuBRABBhQgBBgguBRQguBRhbA8QhYA7iCAiQiCAhilAAQikAAiDghgAjsjoQhlAVhAAjQhAAkgeAuQgeAuAAAxQAAAwAeAuQAeAvBAAjQBAAjBlAVQBjAWCJAAQCKAABjgWQBkgVBBgjQBAgjAdgvQAfguAAgwQAAgxgfguQgdguhAgkQhBgjhkgVQhjgWiKAAQiJAAhjAWg");
+	this.shape.setTransform(132.1,131.6);
 
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#000000").s().p("ADPBaIAAizIDnAAIAACzgAm1BaIAAizIDnAAIAACzg");
-	this.shape_1.setTransform(450.4,222.6);
+	this.shape_1.graphics.f("#000000").s().p("AoVgSIAAigIGoC/IAACmgAEvCfIAAizIDoAAIAACzg");
+	this.shape_1.setTransform(98.8,47);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.htmlInputThing},{t:this.instance},{t:this.aaa}]}).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(266.4,120.6,596.3,374.6);
+p.nominalBounds = new cjs.Rectangle(249.6,120.6,472.6,294.6);
 // library properties:
 lib.properties = {
 	id: 'D43248555B3A0642AA70B06D603579DA',
@@ -243,10 +245,10 @@ lib.properties = {
 	color: "#00CCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1602637511118", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1602637511118", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/textinput.js?1602637511118", id:"an.TextInput"},
-		{src:"components/ui/src/css.js?1602637511118", id:"an.CSS"}
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1602636911322", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1602636911322", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/textinput.js?1602636911322", id:"an.TextInput"},
+		{src:"components/ui/src/css.js?1602636911322", id:"an.CSS"}
 	],
 	preloads: []
 };
